@@ -82,7 +82,7 @@ exports.restorePage = async (req, res) => {
       chapter.versions.push({
         pageId: page.id,
         version: pageVersions.length + 1,
-        username: 'system_restore',
+        username:page.username,
         content: lastVersion.content,
         timestamp: new Date().toISOString()
       });
